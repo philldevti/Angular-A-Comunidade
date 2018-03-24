@@ -9,6 +9,6 @@ export class AppComponent  {
 
 
   onNotifyComment(message: string): void {
-    alert(message);
+
   }
 }

@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-card-header>
+    <div mat-card-avatar [ngStyle]="{'background-image': 'url(' + cartao.urlPhoto + ')','background-size': 'cover'}"></div>
+    <mat-card-title>{{cartao.title}}</mat-card-title>
+    <div class="container text-right">
+      <p class="d-inline"><i style="vertical-align:text-bottom; font-weight:bold" class="material-icons">{{cartao.hashtag}}</i></p>      
+    </div>
+    <mat-card-subtitle>{{cartao.subtitle}}</mat-card-subtitle>
+  </mat-card-header>
+  <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
+  <mat-card-content>
+    <p style="word-wrap: break-word;">
+      {{cartao.comment}}
+    </p>
+  </mat-card-content>
+  <!-- <mat-card-actions>
+    <button mat-button>LIKE</button>
+    <button mat-button>SHARE</button>
+  </mat-card-actions> -->
+</mat-card>

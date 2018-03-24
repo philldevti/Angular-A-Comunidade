@@ -1,4 +1,6 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<div id="wrap">
+<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
+    
         <a class="navbar-brand" href="#">A Comunidade</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -16,18 +18,24 @@
         </div>
       </nav>
     
-     
+      
         <div class="container container-top">
-
+        
           <div class="row vdivide">
             <div class="col-md-4 "></div>
-            <div class="col-md-4"><app-comentario [comentario]="'asjhdgasjhdagsjh'" (notify)="onNotifyComment($event)">loading...</app-comentario></div>
+            <div class="col-md-4"><app-comentario (notify)="onNotifyComment($event)">loading...</app-comentario></div>
             <div class="col-md-4"></div>
           </div>
          
         </div> 
-        <hr>
-    
-        <footer>
-          <p>© 2018 Company, Inc.</p>
-        </footer>        
+         
+      </div>
+ 
+        
+      <footer>
+          <div class="container">
+              <h4 class="text-muted credit">© 2018 Company, Inc.</h4>
+            </div>
+      </footer>   
+   
+           
