@@ -28,8 +28,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## App Url
 
-https://aonirprb.github.stackblitz.io
+https://github-kn5vw4.stackblitz.io
 
 ## Editor URL
 
-https://stackblitz.com/github/aonirprb
+https://stackblitz.com/edit/github-kn5vw4
