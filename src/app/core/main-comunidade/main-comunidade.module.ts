@@ -4,6 +4,7 @@ import { ComentarioComponent } from '../componentes/comentario/comentario.compon
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule, MatCheckboxModule, MatIconModule} from '@angular/material';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,8 @@ import {MatButtonModule, MatCheckboxModule, MatIconModule} from '@angular/materi
     ComentarioComponent
   ],
   imports: [
-    CommonModule, BrowserAnimationsModule, MatIconModule, MatInputModule, MatButtonModule, MatCheckboxModule, MatInputModule
+    CommonModule, FormsModule,
+    BrowserAnimationsModule, MatIconModule, MatInputModule, MatButtonModule, MatCheckboxModule, MatInputModule
   ],
   exports: [
     ComentarioComponent, MatButtonModule, MatCheckboxModule, MatInputModule

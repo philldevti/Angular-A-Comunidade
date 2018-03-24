@@ -1,8 +1,11 @@
   <mat-form-field class="">
-  <textarea matInput #mensagem placeholder="Informe um comentário legal" matTextareaAutosize matAutosizeMinRows="8"
+  <textarea matInput #mensagem placeholder="Informe um comentário legal" [value]="comentario" matTextareaAutosize matAutosizeMinRows="8"
   matAutosizeMaxRows="8" maxlength="256"></textarea>
   <mat-hint align="start"><strong>Não informe dados pessoais</strong></mat-hint>
   <mat-hint align="end">{{mensagem.value.length}} / 256</mat-hint>
-  <mat-icon matSuffix>mode_edit</mat-icon>
+  
+  <mat-icon matSuffix (click)="mensagem.value.length > 0 ?  onClick(mensagem.value) : mostrarMsg()" style="cursor:pointer;" >mode_edit</mat-icon>
+  <!-- <mat-icon matSuffix >{{(1!=1) ? 'visibility' : 'visibility_off'}}</mat-icon> -->
   </mat-form-field>
+  
   
