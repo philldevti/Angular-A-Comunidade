@@ -7,11 +7,14 @@ import {MatButtonModule, MatCheckboxModule, MatIconModule, MatCard, MatCardModul
 import { FormsModule } from '@angular/forms';
 import { CardPostComponent } from '../componentes/card-post/card-post.component';
 import {ScrollDispatchModule} from '@angular/cdk/scrolling';
+import { HashtagComponent } from '../componentes/hashtag/hashtag.component';
+import { UpdatehashService } from '../services/updatehash.service';
 
 @NgModule({
   declarations: [
     ComentarioComponent,
-    CardPostComponent
+    CardPostComponent,
+    HashtagComponent
   ],
   imports: [
     CommonModule, FormsModule,
@@ -19,9 +22,11 @@ import {ScrollDispatchModule} from '@angular/cdk/scrolling';
     MatIconModule, MatInputModule, MatButtonModule, MatCheckboxModule, MatInputModule, MatCardModule
   ],
   exports: [
-    ComentarioComponent, MatButtonModule, MatCheckboxModule, MatInputModule, MatCardModule
+    ComentarioComponent, MatButtonModule, MatCheckboxModule, MatInputModule, MatCardModule, HashtagComponent
   ],
 
-  bootstrap: [ComentarioComponent]
+  bootstrap: [ComentarioComponent],
+
+  providers: [UpdatehashService]
 })
 export class MainComunidadeModule { }

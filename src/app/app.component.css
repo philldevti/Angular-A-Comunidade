@@ -89,29 +89,3 @@ footer{
   height: 100%;
 }
 
-#textarea {
-  background: transparent;
-  border: 1px #ddd solid;
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  width: 400px;
-  height: 120px;
-  font: 9pt Consolas;
-}
-
-#backmodel {
-  position: absolute;
-  top: 7px;
-  left: 30px;
-  background-color: #e0e0e0;
-  width: 53px;
-  height: 9pt;
-  cursor: pointer;
-  z-index: 99999999999;
-  opacity: 0.5;
-}
-
-#textback{
- 
-}
