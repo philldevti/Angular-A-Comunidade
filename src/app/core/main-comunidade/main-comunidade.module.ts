@@ -10,13 +10,15 @@ import {ScrollDispatchModule} from '@angular/cdk/scrolling';
 import { HashtagComponent } from '../componentes/hashtag/hashtag.component';
 import { UpdatehashService } from '../services/updatehash.service';
 import { GroupByPipe } from '../pipes/group-by.pipe';
+import { SortPipe } from '../pipes/sort.pipe';
 
 @NgModule({
   declarations: [
     ComentarioComponent,
     CardPostComponent,
     HashtagComponent,
-    GroupByPipe
+    GroupByPipe,
+    SortPipe
   ],
   imports: [
     CommonModule, FormsModule,
@@ -24,7 +26,9 @@ import { GroupByPipe } from '../pipes/group-by.pipe';
     MatIconModule, MatInputModule, MatButtonModule, MatCheckboxModule, MatInputModule, MatCardModule
   ],
   exports: [
-    ComentarioComponent, MatButtonModule, MatCheckboxModule, MatInputModule, MatCardModule, HashtagComponent, GroupByPipe
+    ComentarioComponent, MatButtonModule, MatCheckboxModule, MatInputModule, MatCardModule, HashtagComponent,
+    GroupByPipe,
+    SortPipe
   ],
 
   bootstrap: [ComentarioComponent],

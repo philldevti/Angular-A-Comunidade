@@ -4,5 +4,6 @@ export class Card {
     subtitle: string;
     comment: string;
     hashtag = '#';
-    totalHashTag = 1;
+    data = new Date();
+
 }
