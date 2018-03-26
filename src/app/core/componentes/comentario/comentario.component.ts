@@ -34,17 +34,28 @@ export class ComentarioComponent implements OnInit {
                                     e,
                                     hashTags.join(' '));
 
-    this.listPost.push(this.postCard);
-
     this.newCard.updateHashTag(this.postCard);
-
     this.notifyNewComment.emit(this.postCard);
 
-    this.mensagem.nativeElement.value = '';
-    this.mensagem.nativeElement.focus();
+    hashTags.forEach(hashtag => {
+      this.postCard.comment = this.removerHashTagMensagem(this.postCard.comment, hashtag);
+    });
+
+    this.listPost.push(this.postCard);
+
+    this.limpar();
   }
 
   mostrarMsg() {
     alert('Informe um texto');
+  }
+
+  limpar() {
+    this.mensagem.nativeElement.value = '';
+    this.mensagem.nativeElement.focus();
+  }
+
+  removerHashTagMensagem(msg, hash) {
+    return msg.replace(hash, '');
   }
 }

@@ -14,7 +14,7 @@
 </div>
 <div class="row">
     <div class="col-md-12" class="scrollbar" id="style-3">
-        <div *ngFor="let post of listPost" >
+        <div *ngFor="let post of listPost.sort()" >
            
             <app-card [cartao]="post" [escondeCard]="false" [escondeHashTag]="true"></app-card>  
          </div>
