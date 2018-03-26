@@ -9,12 +9,14 @@ import { CardPostComponent } from '../componentes/card-post/card-post.component'
 import {ScrollDispatchModule} from '@angular/cdk/scrolling';
 import { HashtagComponent } from '../componentes/hashtag/hashtag.component';
 import { UpdatehashService } from '../services/updatehash.service';
+import { GroupByPipe } from '../pipes/group-by.pipe';
 
 @NgModule({
   declarations: [
     ComentarioComponent,
     CardPostComponent,
-    HashtagComponent
+    HashtagComponent,
+    GroupByPipe
   ],
   imports: [
     CommonModule, FormsModule,
@@ -22,7 +24,7 @@ import { UpdatehashService } from '../services/updatehash.service';
     MatIconModule, MatInputModule, MatButtonModule, MatCheckboxModule, MatInputModule, MatCardModule
   ],
   exports: [
-    ComentarioComponent, MatButtonModule, MatCheckboxModule, MatInputModule, MatCardModule, HashtagComponent
+    ComentarioComponent, MatButtonModule, MatCheckboxModule, MatInputModule, MatCardModule, HashtagComponent, GroupByPipe
   ],
 
   bootstrap: [ComentarioComponent],

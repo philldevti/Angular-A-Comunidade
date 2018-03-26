@@ -11,6 +11,7 @@ export class CardPostComponent implements OnInit {
   @Input() escondeHashTag: boolean;
 
   @Input() cartao: Card;
+  @Input() totalHashTag: number;
   constructor() { }
 
   ngOnInit() {

@@ -5,7 +5,7 @@
     <mat-card-title>{{cartao.title}}</mat-card-title>
      <div class="text-left">
       <mat-card-subtitle style="    word-wrap: break-word;
-      width: 100%;"><i style="vertical-align:text-bottom; font-weight:bold;" class="material-icons"></i>{{cartao.hashtag}}</mat-card-subtitle>
+      width: 100%;"><i style="vertical-align:text-bottom; font-weight:bold;" class="material-icons"></i>{{cartao.hashtag | lowercase}}</mat-card-subtitle>
     </div> 
      <mat-card-subtitle>{{cartao.subtitle}}</mat-card-subtitle>
      
@@ -26,7 +26,7 @@
   <mat-card-title>
       
       <mat-card-subtitle style="    word-wrap: break-word;
-      width: 100%;">{{cartao.totalHashTag}} <i style="vertical-align:text-bottom; font-weight:bold;" class="material-icons"></i>{{cartao.hashtag}}</mat-card-subtitle>
+      width: 100%;">{{totalHashTag}} <i style="vertical-align:text-bottom; font-weight:bold;" class="material-icons"></i>{{cartao.hashtag | lowercase}}</mat-card-subtitle>
     </mat-card-title>
       </mat-card-header>
   </div>

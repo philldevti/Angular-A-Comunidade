@@ -2,7 +2,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Card } from '../../model/card';
 import { UpdatehashService } from '../../services/updatehash.service';
 import { Subscription } from 'rxjs/Subscription';
-
 @Component({
   selector: 'app-hashtag',
   templateUrl: './hashtag.component.html',
@@ -16,7 +15,6 @@ export class HashtagComponent implements OnInit {
   constructor(private newHash: UpdatehashService) {
     this.subscription = newHash.newCard$.subscribe(
       card => {
-          console.log(card);
           this.addNewHash(card);
       });
   }
@@ -25,7 +23,12 @@ export class HashtagComponent implements OnInit {
   }
 
   addNewHash(card: Card): void {
-    this.listHash.push(card);
+    const hashTags = this.newHash.findHashtags(card.hashtag);
+
+    hashTags.forEach(hashT => {
+      const newCard = this.newHash.createNewCard(card.title, card.subtitle, card.urlPhoto, card.comment, hashT);
+      this.listHash.push(newCard);
+    });
   }
 
 }
