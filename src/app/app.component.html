@@ -1,44 +1,29 @@
-<div id="wrap">
-<nav class="navbar navbar-expand-lg navbar-light bg-light navbar-fixed-top">
-    
-        <a class="navbar-brand" href="#">A Comunidade</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            
-          
-          </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="col-md-4"><a class="navbar-brand" href="#">A Comunidade</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
         </div>
-      </nav>
-    
-      
-        <div class="container container-top">
-        
-          <div class="row vdivide">
-            <div class="col-md-4 "></div>
-            <div class="col-md-4"><app-comentario (notifyNewComment)="onNotifyComment($event)">loading...</app-comentario></div>
-            <div class="col-md-4">
-                <app-hashtag></app-hashtag>
-              
-            </div>
-          </div>
-         
-        </div> 
-         
-      </div>
- 
-        
-      <footer>
-          <div class="container">
-              <h4 class="text-muted credit">© 2018 Company, Inc.</h4>
-            </div>
-      </footer>   
-   
-           
+        <div class="col-md-4">
+            <form>
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+        <div class="col-4 card"></div>
+
+    </div>
+</nav>
+<main role="main" class="container-fluid h-100">
+    <div class="row justify-content-center h-100">
+        <div class="col-4 usuarios border-left border-top border-right border border-secondary bg-light"></div>
+        <div class="col-4 comentarios border-top border-right border border-secondary bg-light">
+            <app-comentario (notifyNewComment)="onNotifyComment($event)">loading...</app-comentario>                        
+        </div>
+        <div class="col-4 top-posts border-top border-right border border-secondary bg-light">            
+          
+              <app-hashtag></app-hashtag>  
+
+        </div>
+    </div>
+</main>

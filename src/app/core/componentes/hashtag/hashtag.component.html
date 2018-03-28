@@ -1,7 +1,7 @@
-<div class="row">
-    <div class="col-md-12" class="scrollbar" id="style-3">
+<div class="row border-secondary bg-light justify-content-center h-100 scrollbar">
+<div class="card-body">
         <div *ngFor="let hash of listHash | groupBy: 'hashtag'" >            
             <app-card [totalHashTag]="hash.value.length" [cartao]="hash.value[0]" [escondeCard]="true" [escondeHashTag]="false"></app-card>  
          </div>
+        </div>
     </div>
-  </div>

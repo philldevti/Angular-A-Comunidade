@@ -5,13 +5,12 @@
           <div mat-card-avatar [ngStyle]="{'background-image': 'url(' + cartao.urlPhoto + ')','background-size': 'cover'}"></div>
           <mat-card-title>{{cartao.title}}</mat-card-title>
           <div class="text-left">
-             <mat-card-subtitle style="    word-wrap: break-word;
-                width: 100%;"><i style="vertical-align:text-bottom; font-weight:bold;" class="material-icons"></i>{{cartao.hashtag | lowercase}}</mat-card-subtitle>
+             <mat-card-subtitle ><i style="vertical-align:text-bottom; font-weight:bold;" class="material-icons"></i>{{cartao.hashtag | lowercase}}</mat-card-subtitle>
           </div>
           <mat-card-subtitle>{{cartao.subtitle}}</mat-card-subtitle>
        </mat-card-header>
        <mat-card-content>
-          <p style="word-wrap: break-word;">
+          <p>
              {{cartao.comment}}
           </p>
        </mat-card-content>
@@ -19,8 +18,7 @@
     <div *ngIf="!escondeHashTag">
        <mat-card-header>
           <mat-card-title>
-             <mat-card-subtitle style="    word-wrap: break-word;
-                width: 100%;">{{totalHashTag}} <i style="vertical-align:text-bottom; font-weight:bold;" class="material-icons"></i>{{cartao.hashtag | lowercase}}</mat-card-subtitle>
+             <mat-card-subtitle>{{totalHashTag}} <i style="vertical-align:text-bottom; font-weight:bold;" class="material-icons"></i>{{cartao.hashtag | lowercase}}</mat-card-subtitle>
           </mat-card-title>
        </mat-card-header>
     </div>
